@@ -19,7 +19,10 @@ def multi(op1, op2):
     
 def divi(op1,op2):
     """funcion de dividir"""
-    return op1 / op2
+    if operando1 == 0 or operando2 ==0:  
+        return " No se puede dividir con ceros"
+    else:
+    	return op1/op2
         
 
 if __name__ == "__main__":
@@ -28,6 +31,7 @@ if __name__ == "__main__":
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
+         
 
     if sys.argv[2] == "suma":
         result = plus(operando1, operando2)
@@ -35,7 +39,7 @@ if __name__ == "__main__":
         result = minus(operando1, operando2)
     elif sys.argv[2] == "multiplicar":
         result = multi(operando1, operando2)
-     elif sys.argv[2]== "dividir":
+    elif sys.argv[2]== "dividir":
         result = divi(operando1, operando2)  
             
     else:
