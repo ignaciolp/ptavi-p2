@@ -4,14 +4,13 @@
 import sys
 import calcoohija
 
-calcplus = calcoohija.Calculadorahija()
-
-lectura = sys.argv[1]
-
 
 if __name__ == "__main__":
     try:
+        calcplus = calcoohija.Calculadorahija()
+        lectura = sys.argv[1]
         fichero = open(lectura, 'r')
+
     except:
         sys.exit("Error: Non numerical parameters")
 
